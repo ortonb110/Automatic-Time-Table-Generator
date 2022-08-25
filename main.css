@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  font-size: 2.5rem;
+  background-color: #e7e7e7;
+  height: 100%;
+  margin-top: 15rem;
+}
+
+/* Custom classes */
+
+section {
+  height: 100%;
+}
+
+section .wrapper {
+  max-width: 28%;
+  width: auto;
+  margin: auto;
+  font-size: 2.5rem;
+
+  background-color: #fff;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  box-shadow: -1px 1px 14px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: -1px 1px 14px -1px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: -1px 1px 14px -1px rgba(0, 0, 0, 0.12);
+  padding: 1rem 3.5rem;
+}
+
+section .wrapper header {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 2.5rem;
+}
+.wrapper .title .main-title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.wrapper .title .main-title span {
+  font-size: 4rem;
+  color: #059862;
+  font-weight: 700;
+}
+
+.wrapper .title .main-title sup {
+  font-size: 1.3rem;
+  top: -2rem;
+  margin-left: 0.5rem;
+}
+
+.wrapper .title p {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.wrapper header .error-text {
+  border: 1px solid rgb(240, 184, 184);
+  border-radius: 0.5rem;
+  background-color: rgb(240, 184, 184);
+  padding: 5px 0;
+  margin-bottom: 1.8rem;
+  display: none;
+}
+
+.wrapper header .error-text p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(243, 74, 44);
+  text-align: center;
+}
+
+form {
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.form-group .form-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group .form-items label {
+  margin-bottom: 1rem;
+}
+
+.form-group .form-items input {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgrey;
+  outline-color: #059862;
+  transition: all 0.3s ease;
+}
+
+.form-group .login {
+  display: none;
+}
+
+.form-group .form-items .form-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group .form-items .form-list span {
+  font-size: 1.8rem;
+}
+
+.form-group .form-items .form-list i {
+  margin-right: 0.4rem;
+  cursor: pointer;
+}
+
+.form-group .form-items .form-list i.active::before {
+  content: "\f070";
+}
+
+.form-group .form-items .form-list .cursor,
+form button,
+.form-group .form-items .form-list i {
+  cursor: pointer;
+}
+
+.form-group .form-items .form-list span a {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: #059862;
+  text-decoration: none;
+}
+
+form button {
+  width: 100%;
+  background-color: #059862;
+  color: #fff;
+  padding: 1.5rem 0;
+  border: none;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  margin: 1rem 0 3rem 0;
+}
+
+form button:hover {
+  background-color: #08754d;
+}
