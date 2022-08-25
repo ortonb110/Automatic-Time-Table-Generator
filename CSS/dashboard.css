@@ -80,6 +80,9 @@ header .dropdown .toggle {
   height: 100%;
   color: #fff;
 }
+.section {
+  margin-right: 1rem;
+}
 
 .content {
   display: none;
@@ -150,6 +153,16 @@ section .content .nav-item:hover {
 
 .main-content::-webkit-scrollbar {
   width: 0;
+}
+
+main .addDepartment {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .addDepartment button {
+  font-size: 2rem;
+  padding: 0 10px;
 }
 
 main .custom-select {

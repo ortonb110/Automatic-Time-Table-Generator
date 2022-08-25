@@ -26,17 +26,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="./CSS/dashboard.css" />
-    <script src="./JavaScript/show-hide-navbar.js" defer></script>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <script src="../JavaScript/show-hide-navbar.js" defer></script>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
             <?php
-            include_once "Php/config.php";
+            include_once "../Php/config.php";
             $sqli = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$_SESSION['unique_id']}'");
             if($sqli) {
                 $row = mysqli_fetch_assoc($sqli);
@@ -53,8 +53,7 @@
                 <a class="btn btn-success dropdown-toggle toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <?php
-                echo $row['fullname'];
-            ?>
+                echo $row['fullname']; ?>
                 </a>
 
                 <ul class="dropdown-menu">
@@ -67,14 +66,14 @@
         <div class="hero">
             <section class="section">
                 <div class="content">
-                    <a class="nav-item active" href="#">
+                    <a class="nav-item " href="../dashboard.php">
                         <span class="material-symbols-outlined material-icon">
                             library_books
                         </span>
                         <span class="text">Departments</span>
 
                     </a>
-                    <a class="nav-item" href="./dashboardfiles/course.php">
+                    <a class="nav-item active" href="/dashboardfiles/course.php">
                         <span class="material-symbols-outlined material-icon">
                             school
                         </span>
@@ -94,12 +93,12 @@
                     </a>
                 </div>
                 <div class="sec-nav-content nav-active">
-                    <div class="nav-item active">
+                    <div class="nav-item">
                         <span class="material-symbols-outlined material-icon">
                             library_books
                         </span>
                     </div>
-                    <div class="nav-item">
+                    <div class="nav-item active">
                         <span class="material-symbols-outlined material-icon">
                             school
                         </span>
@@ -119,19 +118,19 @@
             <main class="main-content">
                 <div class="addDepartment">
                     <div class="custom-select">
-                        <span>View Department</span>
+                        <span>View Courses</span>
                         <select>
-                            <option value="0">Select Department:</option>
-                            <option value="1">Computer Science</option>
-                            <option value="2">Science laboratory Technology</option>
-                            <option value="3">Mechanical Engineering</option>
+                            <option value="0">Select Course:</option>
+                            <option value="1">Web Development Technologies</option>
+                            <option value="2">Software Object-Oriented programming with Visual Basic</option>
+                            <option value="3">Computer Networking</option>
                         </select>
                     </div>
                     <div class="add-department">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-success " data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
-                            Add Department
+                            Add Course
                         </button>
 
                         <!-- Modal -->
@@ -140,7 +139,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Course Details</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -148,19 +147,27 @@
                                         <form action="#" class="form-group">
                                             <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="name">Department Name</label>
+                                                    <label for="name">Course Id</label>
 
                                                 </div>
-                                                <input type="text" name="departmentname" id="name"
-                                                    placeholder="Enter department name" />
+                                                <input type="text" name="course_id" id="name"
+                                                    placeholder="Enter course id" />
                                             </div>
-                                            <div class="form-items form-item-password">
+                                            <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="departmentabout">About</label>
+                                                    <label for="name">Course Title</label>
 
                                                 </div>
-                                                <textarea id="bio" name="departmentabout" rows="4" cols="50">
-                                                </textarea>
+                                                <input type="text" name="course_title" id="name"
+                                                       placeholder="Enter course title" />
+                                            </div>
+                                            <div class="form-items">
+                                                <div class="form-list">
+                                                    <label for="name">Course Duration(in hours)</label>
+
+                                                </div>
+                                                <input type="text" name="duration" id="name"
+                                                       placeholder="Enter duration" />
                                             </div>
                                             
                                         </form>
@@ -177,15 +184,15 @@
                 </div>
                 <section class="department">
                     <header>
-                        <img src="./images/emblem-removebg-preview.png" alt="Accra technical university emblem"
+                        <img src="../images/emblem-removebg-preview.png" alt="Accra technical university emblem"
                             class="logo">
                         <div>
-                            <h1 class="department-title">Computer Science</h1>
+                            <h1 class="department-title">Web Development Technologies</h1>
                             <p class="sub-title">Accra Technical University</p>
                         </div>
                     </header>
                     <div class="department-details">
-                        <img src="./images/hall.jpeg" alt="" class="department-image">
+                        <img src="../images/hall.jpeg" alt="" class="department-image">
                         <p>Building capacity in computer algorithm through research and training, shaping academic
                             discussions in computer literacy with knowledge in the growth and utilization of modern
                             technology and equipment for complex computing is the focus of the Computer Science
@@ -204,9 +211,7 @@
                             progression of computer technology in industry.</p>
                     </div>
                 </section>
-                <div class="headOfdepartment">
-
-                </div>
+                
             </main>
         </div>
     </div>
