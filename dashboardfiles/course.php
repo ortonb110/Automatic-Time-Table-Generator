@@ -147,27 +147,51 @@
                                         <form action="#" class="form-group">
                                             <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="name">Course Id</label>
+                                                    <label for="courseId">Course #Id</label>
 
                                                 </div>
-                                                <input type="text" name="course_id" id="name"
+                                                <input type="text" name="course_id" id="courseId"
                                                     placeholder="Enter course id" />
                                             </div>
                                             <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="name">Course Title</label>
+                                                    <label for="courseTitle">Course Title</label>
 
                                                 </div>
-                                                <input type="text" name="course_title" id="name"
+                                                <input type="text" name="course_title" id="courseTitle"
                                                        placeholder="Enter course title" />
                                             </div>
                                             <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="name">Course Duration(in hours)</label>
+                                                    <label for="duration">Course Credit Hours</label>
 
                                                 </div>
-                                                <input type="text" name="duration" id="name"
+                                                <input type="text" name="duration" id="duration"
                                                        placeholder="Enter duration" />
+                                            </div>
+                                            <div class="form-items">
+                                                <div class="form-list">
+                                                    <label for="venue">Venue</label>
+
+                                                </div>
+                                                <input type="text" name="course_venue" id="venue"
+                                                       placeholder="Enter venue" />
+                                            </div>
+                                            <div class="form-items">
+                                                <div class="form-list">
+                                                    <label for="lecturer">Lecturer</label>
+
+                                                </div>
+                                                <input type="text" name="course_lecturer" id="lecturer"
+                                                       placeholder="Enter course Lecturer's name" />
+                                            </div>
+                                            <div class="form-items">
+                                                <div class="form-list">
+                                                    <label for="courseDepartment">Course Department</label>
+
+                                                </div>
+                                                <input type="text" name="course_department" id="courseDepartment"
+                                                       placeholder="Enter affiliated department" />
                                             </div>
                                             
                                         </form>

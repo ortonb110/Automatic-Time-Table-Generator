@@ -120,9 +120,9 @@
             <main class="main-content">
                 <div class="addDepartment">
                     <div class="custom-select">
-                        <span>View Department</span>
+                        <span>View Departments</span>
                         <label>
-                            <select id="mySelect" onchange="selectDepartmentDetails()">
+                            <select id="mySelect" onchange="selectDepartmentDetails(this.value)">
                                 <option value="0">Select Department</option>
                                 <?php
                                    foreach ($result as $row1) {
@@ -177,17 +177,15 @@
                         </div>
                     </div>
                 </div>
-                <section class="department">
+                <section class="department" id="departmentSection">
 
 
                 </section>
-                <div class="headOfdepartment">
 
-                </div>
             </main>
         </div>
     </div>
-    <script src="./JavaScript/selectDepartment.js" defer></script>
+    <script src="./JavaScript/selectDepartment.js" defer ></script>
 </body>
 
 </html>
