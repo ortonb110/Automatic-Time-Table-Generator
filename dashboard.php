@@ -5,9 +5,6 @@
     }
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +27,8 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="./CSS/dashboard.css" />
     <script src="./JavaScript/show-hide-navbar.js" defer></script>
+    <script src="./JavaScript/dashboard.js" defer></script>
+
 </head>
 
 <body>
@@ -38,8 +37,10 @@
             <?php
             include_once "Php/config.php";
             $sqli = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = '{$_SESSION['unique_id']}'");
-            if($sqli) {
+            $result = mysqli_query($conn, "SELECT * FROM departments");
+            if($sqli && $result) {
                 $row = mysqli_fetch_assoc($sqli);
+
             }
           ?>
             <div class="menu">
@@ -60,7 +61,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Info</a></li>
                     <li><a class="dropdown-item" href="#">Account settings</a></li>
-                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                    <li><a class="dropdown-item" href="./index.php">Log out</a></li>
                 </ul>
             </div>
         </header>
@@ -80,13 +81,13 @@
                         </span>
                         <span class="text">Courses</span>
                     </a>
-                    <a class="nav-item" href="/dashboardfiles/teachers.php">
+                    <a class="nav-item" href="./dashboardfiles/teachers.php">
                         <span class="material-symbols-outlined material-icon">
                             person
                         </span>
                         <span class="text">Teachers</span>
                     </a>
-                    <a class="nav-item" href="/dashboardfiles/timetable.php">
+                    <a class="nav-item" href="./dashboardfiles/timetable.php">
                         <span class="material-symbols-outlined material-icon">
                             table
                         </span>
@@ -120,15 +121,19 @@
                 <div class="addDepartment">
                     <div class="custom-select">
                         <span>View Department</span>
-                        <select>
-                            <option value="0">Select Department:</option>
-                            <option value="1">Computer Science</option>
-                            <option value="2">Science laboratory Technology</option>
-                            <option value="3">Mechanical Engineering</option>
-                        </select>
+                        <label>
+                            <select id="mySelect" onchange="selectDepartmentDetails()">
+                                <option value="0">Select Department</option>
+                                <?php
+                                   foreach ($result as $row1) {
+                                       echo '<option value="'.$row1['id'].'"> '.$row1['department_name'].' </option>';
+                                   }
+                                ?>
+                            </select>
+                        </label>
                     </div>
                     <div class="add-department">
-                        <!-- Button trigger modal -->
+                        <!- Button trigger modal -->
                         <button type="button" class="btn btn-success " data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Add Department
@@ -148,27 +153,24 @@
                                         <form action="#" class="form-group">
                                             <div class="form-items">
                                                 <div class="form-list">
-                                                    <label for="name">Department Name</label>
-
+                                                    <label for="departmentName">Department Name</label>
                                                 </div>
-                                                <input type="text" name="departmentname" id="name"
+                                                <input type="text" name="departmentName" id="name"
                                                     placeholder="Enter department name" />
                                             </div>
                                             <div class="form-items form-item-password">
                                                 <div class="form-list">
-                                                    <label for="departmentabout">About</label>
-
+                                                    <label for="departmentAbout">About</label>
                                                 </div>
-                                                <textarea id="bio" name="departmentabout" rows="4" cols="50">
+                                                <textarea id="bio" name="departmentAbout" rows="4" cols="50">
                                                 </textarea>
                                             </div>
-                                            
+                                            <input type="submit" id="submitBtn"/>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -176,33 +178,8 @@
                     </div>
                 </div>
                 <section class="department">
-                    <header>
-                        <img src="./images/emblem-removebg-preview.png" alt="Accra technical university emblem"
-                            class="logo">
-                        <div>
-                            <h1 class="department-title">Computer Science</h1>
-                            <p class="sub-title">Accra Technical University</p>
-                        </div>
-                    </header>
-                    <div class="department-details">
-                        <img src="./images/hall.jpeg" alt="" class="department-image">
-                        <p>Building capacity in computer algorithm through research and training, shaping academic
-                            discussions in computer literacy with knowledge in the growth and utilization of modern
-                            technology and equipment for complex computing is the focus of the Computer Science
-                            Department.
-                            The department through this programme is poised to deliver competency-based training to ease
-                            the setting up of computer system software for individuals and corporate entities for the
-                            progression and application of modern computing technology in the world of works.
-                            It is the plan of the department to champion continuous efforts to run a broadly-based
-                            computing discipline networking in hardware, software development, computer programming,
-                            software engineering, software testing as well as installation, maintenance and repair of
-                            computer systems.
-                            These areas provide our students with the technical skills required to solve emerging
-                            problems in industry as well as serving as the foundation for research and graduate studies.
-                            Upon completion of this programme, graduates are better equipped with high-quality
-                            real-world experience through applied tasks to prepare them with mid-level experience in the
-                            progression of computer technology in industry.</p>
-                    </div>
+
+
                 </section>
                 <div class="headOfdepartment">
 
@@ -210,6 +187,7 @@
             </main>
         </div>
     </div>
+    <script src="./JavaScript/selectDepartment.js" defer></script>
 </body>
 
 </html>

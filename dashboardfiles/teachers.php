@@ -59,7 +59,7 @@ if (!isset($_SESSION['unique_id'])) {
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Info</a></li>
                 <li><a class="dropdown-item" href="#">Account settings</a></li>
-                <li><a class="dropdown-item" href="#">Log out</a></li>
+                <li><a class="dropdown-item" href="../index.php">Log out</a></li>
             </ul>
         </div>
     </header>
@@ -73,19 +73,19 @@ if (!isset($_SESSION['unique_id'])) {
                     <span class="text">Departments</span>
 
                 </a>
-                <a class="nav-item active" href="/dashboardfiles/course.php">
+                <a class="nav-item " href="./course.php">
                         <span class="material-symbols-outlined material-icon">
                             school
                         </span>
                     <span class="text">Courses</span>
                 </a>
-                <a class="nav-item" href="/dashboardfiles/teachers.php">
+                <a class="nav-item active" href="#">
                         <span class="material-symbols-outlined material-icon">
                             person
                         </span>
                     <span class="text">Teachers</span>
                 </a>
-                <a class="nav-item" href="/dashboardfiles/timetable.php">
+                <a class="nav-item" href="./timetable.php">
                         <span class="material-symbols-outlined material-icon">
                             table
                         </span>
@@ -98,12 +98,12 @@ if (!isset($_SESSION['unique_id'])) {
                             library_books
                         </span>
                 </div>
-                <div class="nav-item active">
+                <div class="nav-item ">
                         <span class="material-symbols-outlined material-icon">
                             school
                         </span>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item active">
                         <span class="material-symbols-outlined material-icon">
                             person
                         </span>
@@ -120,7 +120,7 @@ if (!isset($_SESSION['unique_id'])) {
                 <div class="custom-select">
                     <span>View Department</span>
                     <select>
-                        <option value="0">Select Department:</option>
+                        <option value="0">Select Teachers:</option>
                         <option value="1">Computer Science</option>
                         <option value="2">Science laboratory Technology</option>
                         <option value="3">Mechanical Engineering</option>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['unique_id'])) {
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-success " data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
-                        Add Department
+                        Add Teacher
                     </button>
 
                     <!-- Modal -->
@@ -139,7 +139,7 @@ if (!isset($_SESSION['unique_id'])) {
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Teacher Details</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
@@ -147,7 +147,7 @@ if (!isset($_SESSION['unique_id'])) {
                                     <form action="#" class="form-group">
                                         <div class="form-items">
                                             <div class="form-list">
-                                                <label for="name">Department Name</label>
+                                                <label for="name">Teacher's Name</label>
 
                                             </div>
                                             <input type="text" name="departmentname" id="name"
@@ -160,6 +160,14 @@ if (!isset($_SESSION['unique_id'])) {
                                             </div>
                                             <textarea id="bio" name="departmentabout" rows="4" cols="50">
                                                 </textarea>
+                                        </div>
+                                        <div class="form-items form-item-password">
+                                            <div class="form-list">
+                                                <label for="courseTitle">Course Title</label>
+
+                                            </div>
+                                            <input type="text" name="courseTitle" id="courseTitle"
+                                                   placeholder="Enter course title" />
                                         </div>
 
                                     </form>

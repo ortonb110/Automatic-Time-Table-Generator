@@ -59,7 +59,7 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Info</a></li>
                     <li><a class="dropdown-item" href="#">Account settings</a></li>
-                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                    <li><a class="dropdown-item" href="../index.php">Log out</a></li>
                 </ul>
             </div>
         </header>
@@ -73,19 +73,19 @@
                         <span class="text">Departments</span>
 
                     </a>
-                    <a class="nav-item active" href="/dashboardfiles/course.php">
+                    <a class="nav-item active" href="#">
                         <span class="material-symbols-outlined material-icon">
                             school
                         </span>
                         <span class="text">Courses</span>
                     </a>
-                    <a class="nav-item" href="/dashboardfiles/teachers.php">
+                    <a class="nav-item" href="./teachers.php">
                         <span class="material-symbols-outlined material-icon">
                             person
                         </span>
                         <span class="text">Teachers</span>
                     </a>
-                    <a class="nav-item" href="/dashboardfiles/timetable.php">
+                    <a class="nav-item" href="./timetable.php">
                         <span class="material-symbols-outlined material-icon">
                             table
                         </span>
