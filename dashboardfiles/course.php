@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../main.css" />
     <link rel="stylesheet" href="../CSS/dashboard.css" />
     <script src="../JavaScript/show-hide-navbar.js" defer></script>
+    <script src="../JavaScript/course.js" defer></script>
 </head>
 
 <body>
@@ -117,15 +118,7 @@
             </section>
             <main class="main-content">
                 <div class="addDepartment">
-                    <div class="custom-select">
-                        <span>View Courses</span>
-                        <select>
-                            <option value="0">Select Course:</option>
-                            <option value="1">Web Development Technologies</option>
-                            <option value="2">Software Object-Oriented programming with Visual Basic</option>
-                            <option value="3">Computer Networking</option>
-                        </select>
-                    </div>
+
                     <div class="add-department">
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-success " data-bs-toggle="modal"
@@ -206,34 +199,21 @@
                         </div>
                     </div>
                 </div>
-                <section class="department">
-                    <header>
-                        <img src="../images/emblem-removebg-preview.png" alt="Accra technical university emblem"
-                            class="logo">
-                        <div>
-                            <h1 class="department-title">Web Development Technologies</h1>
-                            <p class="sub-title">Accra Technical University</p>
-                        </div>
-                    </header>
-                    <div class="department-details">
-                        <img src="../images/hall.jpeg" alt="" class="department-image">
-                        <p>Building capacity in computer algorithm through research and training, shaping academic
-                            discussions in computer literacy with knowledge in the growth and utilization of modern
-                            technology and equipment for complex computing is the focus of the Computer Science
-                            Department.
-                            The department through this programme is poised to deliver competency-based training to ease
-                            the setting up of computer system software for individuals and corporate entities for the
-                            progression and application of modern computing technology in the world of works.
-                            It is the plan of the department to champion continuous efforts to run a broadly-based
-                            computing discipline networking in hardware, software development, computer programming,
-                            software engineering, software testing as well as installation, maintenance and repair of
-                            computer systems.
-                            These areas provide our students with the technical skills required to solve emerging
-                            problems in industry as well as serving as the foundation for research and graduate studies.
-                            Upon completion of this programme, graduates are better equipped with high-quality
-                            real-world experience through applied tasks to prepare them with mid-level experience in the
-                            progression of computer technology in industry.</p>
-                    </div>
+                <section class="table mt-5"  >
+                    <table class="table table-dark mb-5">
+                        <thead>
+                        <tr>
+                            <th scope="col">Course Code</th>
+                            <th scope="col">Course Name</th>
+                            <th scope="col">Credit Hours</th>
+                            <th scope="col">Lecturer</th>
+                            <th scope="col">Venue</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+
+                        </tbody>
+                    </table>
                 </section>
                 
             </main>

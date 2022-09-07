@@ -17,7 +17,6 @@ body {
 
 .wrapper {
   background-color: #fff;
-  height: 100%;
   overflow-y: auto;
   transition: all 0.3s ease;
 }
@@ -239,4 +238,8 @@ main .department-details p {
   padding: 1rem 1.5rem;
   overflow-y: auto;
   font-size: 20px;
+}
+
+.table {
+  margin-bottom: 80px !important;
 }

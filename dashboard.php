@@ -178,11 +178,53 @@
                     </div>
                 </div>
                 <section class="department" id="departmentSection">
-
-
                 </section>
+                <!-- <div class="courseTable">
+                    <table >
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credit Hours</th>
+                            <th>Remarks</th>
+                            <th>Lecturer</th>
+                            <th>Remarks</th>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td>h</td>
+                            <td>5</td>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                </div> -->
+                <table class="table table-dark mb-5">
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
 
+                </table>
             </main>
+            
         </div>
     </div>
     <script src="./JavaScript/selectDepartment.js" defer ></script>

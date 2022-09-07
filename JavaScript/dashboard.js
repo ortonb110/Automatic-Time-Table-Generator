@@ -17,7 +17,7 @@ submitBtn.onclick = () => {
                     alert("Added to Departments");
                     location.href = "./dashboard.php";
                 } else {
-                    alert("Failed");
+                    alert(data);
                 }
             }
         }
