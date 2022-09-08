@@ -28,6 +28,7 @@
     </script>
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="../CSS/course.css"/>
     <link rel="stylesheet" href="../CSS/dashboard.css" />
     <script src="../JavaScript/show-hide-navbar.js" defer></script>
     <script src="../JavaScript/course.js" defer></script>
@@ -137,7 +138,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="#" class="form-group">
+                                        <form action="#" class="form-group" id="addCourseForm">
                                             <div class="form-items">
                                                 <div class="form-list">
                                                     <label for="courseId">Course #Id</label>
@@ -186,13 +187,13 @@
                                                 <input type="text" name="course_department" id="courseDepartment"
                                                        placeholder="Enter affiliated department" />
                                             </div>
-                                            
+                                            <input type="submit" id="submitBtn"/>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Add</button>
+
                                     </div>
                                 </div>
                             </div>

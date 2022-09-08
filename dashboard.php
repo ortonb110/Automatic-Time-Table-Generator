@@ -227,7 +227,7 @@
             
         </div>
     </div>
-    <script src="./JavaScript/selectDepartment.js" defer ></script>
+    <script src="./JavaScript/selectDepartment.js"></script>
 </body>
 
 </html>
