@@ -2,6 +2,7 @@
     include_once "config.php";
     $id =intval( $_GET['id']);
     $output = "";
+    $courseOutput = "";
     $sql = mysqli_query($conn, "SELECT * FROM departments WHERE id = '{$id}'");
     if ($sql) {
        while( $row = mysqli_fetch_assoc($sql)) {

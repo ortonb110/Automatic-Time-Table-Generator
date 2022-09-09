@@ -200,8 +200,8 @@
                         </div>
                     </div>
                 </div>
-                <section class="table mt-5"  >
-                    <table class="table table-dark mb-5">
+                <section class=" mt-5" >
+                    <table class="table table-dark mb-5 table-striped table-bordered custom-table">
                         <thead>
                         <tr>
                             <th scope="col">Course Code</th>

@@ -31,7 +31,7 @@ submitBtn.onclick = () => {
                 let data = xmlHttp.response;
                 if (data === "success") {
                     alert("Added to Courses");
-                    location.href = "../dashboardfiles/addCourse.php";
+                    location.href = "../dashboardfiles/course.php";
                 } else {
                     alert(data);
                 }
